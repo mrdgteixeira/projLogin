@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela de Login</title>
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Formulário de Login -->
+  <div class="container" id="loginBox">
+    <h2>Login</h2>
+    
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">
+          E-mail 
+          <span class="obrigatorio" aria-label="campo obrigatório">*</span>
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email"
+          placeholder="usuario@dominio.com"
+          autocomplete="email"
+          required
+          aria-describedby="erro"
+        />
+      </div>
+
+      <!-- Senha -->
+      <div class="form-group">
+        <label for="senha">
+          Senha 
+          <span class="obrigatorio" aria-label="campo obrigatório">*</span>
+        </label>
+        <input 
+          type="password" 
+          id="senha" 
+          name="senha"
+          placeholder="Digite sua senha"
+          autocomplete="current-password"
+          required
+          aria-describedby="erro"
+        />
+      </div>
+
+      <!-- Erro -->
+      <div id="erro" class="erro" role="alert" aria-live="polite"></div>
+
+      <!-- Botão Entrar -->
+      <button type="submit" id="loginBtn">Entrar</button>
+    </form>
+  </div>
+
+  <!-- Painel Restrito -->
+  <div class="container hidden" id="painel">
+    <h2>Área Restrita</h2>
+    <p class="painel-info">
+      Bem-vindo! Você está autenticado como: <strong id="userEmail"></strong>
+    </p>
+    <button onclick="handleLogout()">Logout</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

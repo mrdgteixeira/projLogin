@@ -1,0 +1,217 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body - Centraliza conteúdo */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 16px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 360px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+/* Grupo do formulário */
+.form-group {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+label .obrigatorio {
+  color: #c0392b;
+  margin-left: 2px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 2px rgba(41, 128, 185, 0.15);
+}
+
+/* Input com erro */
+input.campo-invalido {
+  border-color: #c0392b;
+  background-color: #fff5f5;
+}
+
+input.campo-invalido:focus {
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.15);
+}
+
+/* Botões */
+button {
+  width: 100%;
+  padding: 11px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  background-color: #2471a3;
+}
+
+button:active {
+  background-color: #1f5a8f;
+}
+
+/* Botão desabilitado */
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Erros */
+.erro {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  min-height: 18px;
+  padding: 8px;
+  background-color: #fff5f5;
+  border-left: 3px solid #c0392b;
+  border-radius: 3px;
+}
+
+.erro:empty {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* Painel info */
+.painel-info {
+  color: #555;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.painel-info strong {
+  color: #2980b9;
+  word-break: break-all;
+}
+
+/* Ocultação */
+.hidden {
+  display: none;
+}
+
+/* Mobile grande (até 600px) */
+@media (max-width: 600px) {
+  .container {
+    border-radius: 6px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile pequeno (até 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 24px 16px;
+    border-radius: 6px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 13px;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .erro {
+    font-size: 0.8rem;
+  }
+
+  .painel-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile muito pequeno (até 320px) */
+@media (max-width: 320px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
