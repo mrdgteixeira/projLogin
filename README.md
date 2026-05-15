@@ -1,37 +1,38 @@
-# 🔐 Tela de Login
+Tela de Login
 
-Projeto desenvolvido para a disciplina de **Qualidade de Software** — Subscrição em Sistema de Informação
-
----
-
-## 📋 Responsabilidades
-
-| Responsabilidade | Descrição |
-|------------------|-----------|
-| **Validação de Dados** | Validação de campos vazios e formato de email |
-| **Autenticação** | Comparação de credenciais com dados predefinidos |
-| **Gerenciamento de Sessão** | Persistência de sessão com sessionStorage |
-| **Interface Responsiva** | Adaptação para diferentes tamanhos de tela |
-| **Qualidade de Software** | Testes e conformidade com requisitos |
+Projeto desenvolvido para a disciplina de Qualidade de Software — Subscrição em Sistema de Informação
 
 ---
 
-## 🚀 Como Executar
+Funcionalidades
 
-### Pré-requisitos
+O sistema oferece as seguintes funcionalidades:
 
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
-- Sem necessidade de servidor ou dependências
+| Funcionalidade | Descrição |
+|---|---|
+| Validação de Entrada | Validação de campos vazios e verificação de formato de email válido |
+| Autenticação de Usuário | Comparação de credenciais fornecidas com dados predefinidos no sistema |
+| Gerenciamento de Sessão | Armazenamento e recuperação de dados de sessão usando sessionStorage |
+| Interface Responsiva | Adaptação automática da interface para diferentes tamanhos de tela e dispositivos |
+| Controle de Acesso | Restrição de acesso a áreas específicas mediante autenticação bem-sucedida |
 
-### Passos
+---
 
-1. **Clonar o repositório**
-   ```bash
+Como Executar
+
+Pré-requisitos
+
+- Navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Sem necessidade de servidor ou dependências externas
+
+Passos para Execução
+
+1. Clonar o repositório
+
    git clone https://github.com/mrdgteixeira/projLogin.git
-   ```
 
-2. **Abrir no navegador**
-   ```bash
+2. Abrir o arquivo no navegador
+
    # Windows
    start index.html
    
@@ -40,150 +41,205 @@ Projeto desenvolvido para a disciplina de **Qualidade de Software** — Subscri�
    
    # Linux
    firefox index.html
-   ```
 
-3. **Usar credenciais de teste**
-   ```
+3. Utilizar as credenciais de teste
+
    Email: qualidade.ufr@gmail.com
    Senha: 12345678
-   ```
 
 ---
 
-## ✨ Funcionalidades
+Descrição das Funcionalidades
 
-- ✅ **Validação de Campos** — Detecta campos vazios e valida formato de email
-- ✅ **Autenticação Segura** — Validação com comparação de credenciais
-- ✅ **Feedback Visual** — Mensagens de erro específicas e campos destacados
-- ✅ **Área Restrita** — Painel exibido apenas após login bem-sucedido
-- ✅ **Logout Funcional** — Limpeza completa de dados e sessão
-- ✅ **Persistência de Sessão** — Login permanece após F5 (refresh)
-- ✅ **Responsividade** — Funciona em desktop, tablet e mobile
-- ✅ **Acessibilidade** — Suporte a ARIA e leitores de tela
+Validação de Campos
+
+O sistema valida os dados inseridos em tempo real, verificando:
+
+- Campos obrigatórios preenchidos
+- Formato de email válido conforme padrão internacional
+- Mensagens de erro específicas para cada tipo de erro
+- Destaque visual dos campos com problemas
+
+Autenticação
+
+O processo de autenticação compara as credenciais fornecidas com dados predefinidos:
+
+- Validação de email
+- Validação de senha
+- Retorno de mensagens claras em caso de falha
+- Redirecionamento para área restrita em caso de sucesso
+
+Gerenciamento de Sessão
+
+A sessão do usuário é gerenciada através do sessionStorage:
+
+- Armazenamento do email do usuário autenticado
+- Persistência da sessão ao recarregar a página
+- Limpeza automática ao fechar a aba do navegador
+- Logout manual que remove todos os dados da sessão
+
+Interface Responsiva
+
+A interface adapta-se a diferentes tamanhos de tela:
+
+- Desktop (resolução acima de 600px)
+- Tablet (resolução entre 400px e 600px)
+- Mobile (resolução abaixo de 400px)
+- Dispositivos muito pequenos (resolução abaixo de 320px)
+
+Controle de Acesso
+
+O sistema oferece dois níveis de acesso:
+
+- Tela de login (acessível a todos)
+- Painel restrito (acessível apenas após autenticação bem-sucedida)
 
 ---
 
-## 📁 Estrutura do Projeto
+Estrutura do Projeto
 
-```
 projLogin/
-├── index.html          # Estrutura semântica do formulário
-├── styles.css          # Estilos e responsividade (4 breakpoints)
+├── index.html          # Estrutura HTML do formulário
+├── styles.css          # Estilos e layout responsivo
 ├── auth.js             # Lógica de autenticação e validação
-├── app.js              # Controle de eventos e fluxo da aplicação
+├── app.js              # Controle de eventos da aplicação
 └── README.md           # Este arquivo
-```
 
-### Arquivos Principais
+Descrição dos Arquivos
 
 | Arquivo | Responsabilidade |
-|---------|------------------|
-| **index.html** | Estrutura HTML5 com semântica e ARIA |
-| **styles.css** | Design responsivo (320px - 1920px+) |
-| **auth.js** | Validação, autenticação e gerenciamento de sessão |
-| **app.js** | Manipulação de eventos e fluxo da aplicação |
+|---|---|
+| index.html | Estrutura semântica em HTML5 com marcação ARIA para acessibilidade |
+| styles.css | Design visual responsivo com suporte a múltiplos tamanhos de tela |
+| auth.js | Funções de validação, autenticação e gerenciamento de sessão |
+| app.js | Manipulação de eventos, fluxo de aplicação e controle da interface |
 
 ---
 
-## 🛠️ Tecnologias
+Tecnologias Utilizadas
 
-- **HTML5** — Estrutura semântica
-- **CSS3** — Design responsivo com media queries
-- **JavaScript Vanilla** — Sem dependências externas
-- **sessionStorage** — Persistência de sessão no navegador
+- HTML5 — Marcação semântica para estrutura
+- CSS3 — Estilos e media queries para responsividade
+- JavaScript Vanilla — Lógica de aplicação sem frameworks
+- sessionStorage API — Persistência de dados no navegador
 
 ---
 
-## 🎯 Requisitos de Qualidade
+Requisitos de Qualidade
 
-### Funcionais (9/9) ✅
+Requisitos Funcionais (9/9)
+
 - Validação de campos vazios
-- Validação de email com regex
+- Validação de formato de email
 - Autenticação com credenciais
-- Mensagens de erro específicas
-- Redirect para painel após login
-- Logout com limpeza completa
-- Senha mascarada
-- Sem exposição de dados sensíveis
-- Sem logs de informações sensíveis
+- Mensagens de erro descritivas
+- Redirecionamento para painel após login
+- Logout com limpeza de dados
+- Mascaramento de senha
+- Ausência de exposição de dados sensíveis
+- Ausência de logs de informações sensíveis
 
-### Qualidade (5/5) ✅
-- Usabilidade com feedback visual
-- Integridade de dados com validação em camadas
+Requisitos de Qualidade (5/5)
+
+- Usabilidade com feedback visual clara
+- Integridade de dados com validação em múltiplas camadas
 - Performance com carregamento instantâneo
-- Segurança com proteção de dados
-- Responsividade em 4 breakpoints
+- Segurança com proteção de dados sensíveis
+- Responsividade em diferentes dispositivos
 
-### Aceitação (6/6) ✅
-- Campos vazios rejeitados corretamente
-- Email inválido rejeitado com mensagem
-- Credenciais corretas aceitas
-- Acesso à área restrita autorizado
-- Logout funcional
-- Persistência de sessão em F5
+Critérios de Aceitação (6/6)
 
----
-
-## 🧪 Testes
-
-**Total:** 32 casos de teste | **Sucesso:** 32/32 (100%)
-
-### Categorias de Teste
-
-- **Validação** (8 testes) — Campos vazios, email válido/inválido
-- **Autenticação** (4 testes) — Credenciais corretas/incorretas
-- **UI/Feedback** (3 testes) — Mensagens e estilos de erro
-- **Login/Painel** (3 testes) — Exibição e dados do painel
-- **Logout** (3 testes) — Limpeza de dados e voltam ao login
-- **sessionStorage** (4 testes) — Persistência e limpeza de sessão
-- **Responsividade** (3 testes) — Desktop, tablet, mobile
-- **Segurança** (4 testes) — Mascaramento, XSS, dados sensíveis
+- Campos vazios são rejeitados com mensagem apropriada
+- Email inválido é rejeitado com mensagem explicativa
+- Credenciais corretas são aceitas e painel é exibido
+- Acesso à área restrita mostra dados do usuário autenticado
+- Logout funciona corretamente e limpa todos os dados
+- Sessão persiste ao recarregar a página (F5)
 
 ---
 
-## 📊 Métricas
+Testes
 
-```
+Total de 32 casos de teste com taxa de sucesso de 100%.
+
+Categorias de Teste
+
+| Categoria | Quantidade | Status |
+|---|---|---|
+| Validação | 8 testes | Passou |
+| Autenticação | 4 testes | Passou |
+| Interface e Feedback | 3 testes | Passou |
+| Login e Painel | 3 testes | Passou |
+| Logout | 3 testes | Passou |
+| Gerenciamento de Sessão | 4 testes | Passou |
+| Responsividade | 3 testes | Passou |
+| Segurança | 4 testes | Passou |
+
+---
+
+Métricas do Projeto
+
 Linhas de Código:       457 linhas
-Funções:                9 funções
-Dependências:           0 (Vanilla JS)
+Quantidade de Funções:  9 funções
+Dependências Externas:  0 (Zero)
 Conformidade:           100% (20/20 requisitos)
 Cobertura de Testes:    100% (32/32 casos)
-Score:                  A+ (Excelente)
-```
+Avaliação:              A+ (Excelente)
+Status:                 Pronto para Produção
 
 ---
 
-## 🔐 Segurança
+Segurança
 
-- ✅ Senha sempre mascarada com `type="password"`
-- ✅ Apenas email armazenado em sessionStorage
-- ✅ Sessão limpa ao logout e ao fechar aba
-- ✅ Proteção contra XSS com `textContent` (não innerHTML)
-- ✅ Sem exposição de dados sensíveis no HTML
+O sistema implementa as seguintes medidas de segurança:
 
----
-
-## 📱 Responsividade
-
-**Breakpoints CSS:**
-- **Desktop** — >600px (Padrão)
-- **Tablet** — ≤600px
-- **Mobile** — ≤400px (Font 16px previne zoom iOS)
-- **Mini** — ≤320px
+- Senha é sempre mascarada na interface usando tipo password do HTML
+- Apenas email do usuário é armazenado em sessionStorage
+- Sessão é limpada automaticamente ao logout ou ao fechar a aba
+- Proteção contra XSS usando textContent em vez de innerHTML
+- Dados sensíveis nunca são expostos no código HTML ou console
 
 ---
 
-## 📚 Documentação Adicional
+Responsividade
 
-- **ANALISE_FINAL.md** — Análise técnica detalhada do código
+A aplicação suporta os seguintes pontos de quebra:
+
+| Dispositivo | Resolução | Características |
+|---|---|---|
+| Desktop | Acima de 600px | Layout padrão, elementos maiores |
+| Tablet | Até 600px | Ajuste de espaçamento e tamanho |
+| Mobile | Até 400px | Font-size de 16px para prevenir zoom |
+| Mini Mobile | Até 320px | Otimização para telas muito pequenas |
 
 ---
 
-## 📝 Licença
+Credenciais de Teste
 
-Projeto educacional para a disciplina de Qualidade de Software
+Para testar a aplicação, utilize as seguintes credenciais:
+
+Email:  qualidade.ufr@gmail.com
+Senha:  12345678
 
 ---
 
-**Desenvolvido com foco em Qualidade de Software** 🎓✨
+Fluxo da Aplicação
+
+1. Usuário acessa a aplicação
+2. Sistema verifica se há sessão ativa
+3. Se não houver sessão, formulário de login é exibido
+4. Usuário digita email e senha
+5. Sistema valida os dados
+6. Se válidos, sistema autentica as credenciais
+7. Se autenticado com sucesso, sessão é criada e painel é exibido
+8. Usuário pode fazer logout, limpando a sessão
+
+---
+
+Licença
+
+Projeto educacional desenvolvido para a disciplina de Qualidade de Software.
+
+---
+
+Desenvolvido com foco em Qualidade de Software
